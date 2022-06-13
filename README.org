@@ -1,0 +1,22 @@
+* Cad-liquibase
+
+This project is used by cad-generator for the Liquibase
+relational database changeset handler.
+
+** Trying it out
+To try it out:
+
+#+BEGIN_SRC 
+https://gogs-git.helix.everis.cloud/biriarte/cad-liquibase.git
+cd cad-liquibase
+DEV
+mvn liquibase:update -Dmysql-version=8.0.11 -Dliquibase-properties=src/main/resources/liquibase.properties
+PRD
+mvn liquibase:update -Dmysql-version=5.1.40 -Dliquibase-properties=src/main/resources/liquibase-prd.properties
+#+END_SRC
+
+** The pom.xml file
+The pom.xml file defines things like the jdbc url we need, and also
+the version of the liquibase plugin.
+
+
